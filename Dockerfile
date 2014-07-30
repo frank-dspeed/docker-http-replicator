@@ -1,5 +1,6 @@
 # Source https://help.ubuntu.com/community/HttpReplicator
 FROM ubuntu:14.04
+RUN apt-get -y update && apt-get install wget
 
 RUN wget https://launchpad.net/~tikhonov/+archive/ubuntu/http-replicator/+build/5924499/+files/http-replicator_4.0%7Ealpha2-0tikhonov4%7Etrusty_all.deb
 RUN dpkg -i http-replicator_4.0~alpha2-0tikhonov4~trusty_all.deb
