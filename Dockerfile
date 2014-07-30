@@ -1,9 +1,8 @@
 # Source https://help.ubuntu.com/community/HttpReplicator
 FROM ubuntu:14.04
-# If upstream is dead try:
-# wget 'http://web.archive.org/web/20070816213803/http://gertjan.freezope.org/replicator/http-replicator_3.0_i386.deb'
-RUN wget http://gertjan.freezope.org/replicator/http-replicator_3.0_i386.deb
-RUN dpkg -i http-replicator_3.0_i386.deb
+
+RUN wget https://launchpad.net/~tikhonov/+archive/ubuntu/http-replicator/+build/5924499/+files/http-replicator_4.0%7Ealpha2-0tikhonov4%7Etrusty_all.deb
+RUN dpkg -i http-replicator_4.0~alpha2-0tikhonov4~trusty_all.deb
 #TODO
 #sudo sensible-editor /etc/init.d/http-replicator
 #Change First Line: /bin/sh -> #!/bin/bash
