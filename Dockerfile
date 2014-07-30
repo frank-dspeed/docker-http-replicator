@@ -3,13 +3,6 @@ FROM ubuntu:14.04
 
 RUN wget https://launchpad.net/~tikhonov/+archive/ubuntu/http-replicator/+build/5924499/+files/http-replicator_4.0%7Ealpha2-0tikhonov4%7Etrusty_all.deb
 RUN dpkg -i http-replicator_4.0~alpha2-0tikhonov4~trusty_all.deb
-#TODO
-#sudo sensible-editor /etc/init.d/http-replicator
-#Change First Line: /bin/sh -> #!/bin/bash
-
-# Create Dirs CHOWN
-sudo mkdir /var/cache/http-replicator
-sudo chown proxy.root /var/cache/http-replicator
 
 #Now, to configure the proxy, open up the config file with
 
